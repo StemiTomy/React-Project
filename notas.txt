@@ -1,0 +1,17 @@
+TERMINAL:
+
+-Crear proyecto:
+npm create vite@latest
+
+-Crear proyecto y ejecutarlo (npX):
+npx create vite@latest nombredelaapp
+
+-Comando para iniciar la app:
+npm run dev
+
+-Instalar librería React Router Dom:
+npm i react-router-dom
+
+
+NOTAS:
+React recomienda como buenas prácticas un máximo de 400 líneas por componente y 75 por función.
