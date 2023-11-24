@@ -1,9 +1,10 @@
 
+// Para poder trabajar con el ciclo de vida del componente, importo los hooks useState y useEffect
 
 import { useState, useEffect } from 'react';
 import "./Home.css"
 import { bringAllCharacters } from '../../services/apiCalls';
-
+import { Counter } from '../../common/Counter/Counter';
 
 export const Home = () => {
 
@@ -69,6 +70,18 @@ export const Home = () => {
                             }
                         )
                     }
+                    <Counter 
+                        interval={5}
+                        start={10}
+                    />
+                    <Counter 
+                        interval={10}
+                        start={100}
+                    />
+                    <Counter 
+                        interval={100}
+                        start={100000}
+                    />
                 </div>)
 
                 : (<div>Los datos estan viniendo de la API</div>)
