@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useApiKey } from '../common/ApiKeyContext';
 
-const Popular = () => {
-    const { apiKey } = useApiKey();
+const Popular = ({ apiKey }) => {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {

@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Movies.css';
-import { useApiKey } from '../common/ApiKeyContext';
 
-const { apiKey } = useApiKey();
-
-const Movies = () => {
+const Movies = ({ apiKey }) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -45,4 +42,4 @@ const Movies = () => {
   );
 };
 
-export default MovieList;
+export default Movies;

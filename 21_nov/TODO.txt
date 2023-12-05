@@ -1,3 +1,0 @@
-- Hacer que si estás en el login no te deje logearte ni registrarte, solo home y perfil -> (dentro logout).
-
-- Hacer que register funcione (?) (CREAR JSON EN LOCAL, Y BUSCARLO Y EJECUTARLO EN LOCAL (?))
