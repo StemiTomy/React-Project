@@ -1,17 +1,14 @@
 .headerDesign {
     height: 10vh;
     width: 100vw;
-    background-color: cornflowerblue;
+    background-color: #333;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
-
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
 }
 
 .headerNavDesign {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }

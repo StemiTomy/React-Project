@@ -9,8 +9,6 @@ export const Header = () => {
   //Instanciamos location que proviene de react-router-dom
   const location = useLocation();
 
-  const [token, setToken] = useState("");
-
   const [peliculas, setPeliculas] = useState("");
 
   const [criteria, setCriteria] = useState("");

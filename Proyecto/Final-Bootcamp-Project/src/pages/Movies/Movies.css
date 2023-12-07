@@ -1,0 +1,40 @@
+/* Movies.css */
+.movie-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  position: relative;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.movie-title {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+
+  width: 100%; /* Ajuste para ocupar todo el ancho */
+  height: 100%;
+  box-sizing: border-box; /* Incluye padding y borde en el ancho */
+}

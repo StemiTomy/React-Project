@@ -1,40 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ButtonNav } from "../ButtonNav/ButtonNav";
-import { useLocation } from "react-router-dom";
 import "./Header.css";
-import { bringMovies } from "../../services/apiCalls";
-import { makeAutoObservable } from "mobx"
+import Search from "../Search/Search";
+// import { makeAutoObservable } from "mobx"
 
-export const Header = () => {
-  //Instanciamos location que proviene de react-router-dom
-  const location = useLocation();
+export const Header = ({ apiKey }) => {
 
   const [token, setToken] = useState("");
 
-  const [peliculas, setPeliculas] = useState("");
-
-  const [criteria, setCriteria] = useState("");
-
-  useEffect(() => {
-    bringMovies(criteria)
-      .then((resultado) => {
-        console.log(resultado);
-        setPeliculas(resultado.data.results);
-      })
-      .catch((error) => console.log(error));
-  }, [criteria]);
-
   return (
     <div className="headerDesign">
-      {location.pathname === "/films" && (
-        <input
-          className="inputDesign"
-          type="text"
-          name="criteria"
-          placeholder="busca una pelicula"
-          onChange={(e) => setCriteria(e.target.value)}
-        />
-      )}
 
       <ButtonNav destination={"/"} name={"Home"} />
 
@@ -50,6 +25,8 @@ export const Header = () => {
           <ButtonNav destination={"/login"} name={"Login"} />
         </div>
       )}
+
+      <Search />
     </div>
   );
 };
